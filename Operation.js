@@ -37,3 +37,6 @@ else {
     console.log("Contact not found.");
 }
 addressBook.displayContacts();
+addressBook.deleteContactByName("steve", "Smith");
+console.log("Final display");
+addressBook.displayContacts();
