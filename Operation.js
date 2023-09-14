@@ -14,19 +14,19 @@ addressBook.addContact(contact3);
 
 addressBook.displayContacts();
 
-const foundContact = addressBook.findContactByName("Shrey", "Vermas");
+const foundContact = addressBook.findContactByName("Rohit", "sharma");
 
 if (foundContact) {
    
     const updatedInfo = {
-        address: "789 Elm St",
-        city: "Chicago",
-        state: "ILqwerty",
-        zip: "600601",
-        phoneNumber: "1234567890",
+        address: "345 ftcf dfg",
+        city: "kjhgfddfghj",
+        state: "jcxsrthfd",
+        zip: "097890",
+        phoneNumber: "0987654321",
         email: "updated.email@example.com",
     };
-    const success = addressBook.editContact("Shrey", "Vermas", updatedInfo);
+    const success = addressBook.editContact("Rohit", "Sharma", updatedInfo);
     if (success) {
         console.log("Contact updated successfully!");
     } else {
