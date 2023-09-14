@@ -43,3 +43,5 @@ addressBook.displayContacts();
 
 const contactCount = addressBook.getContactCount();
 console.log(`Number of Contacts: ${contactCount}`);
+
+addressBook.addContact(contact4);
