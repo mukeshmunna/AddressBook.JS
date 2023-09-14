@@ -48,5 +48,28 @@ console.log(`Number of Contacts: ${contactCount}`);
 
 addressBook.addContact(contact4);
 
-addressBook.findAndDisplayContactsByCity('Hydrabad');
-addressBook.findAndDisplayContactsByState('dyduf');
+console.log("==========Search display=============");
+console.log("Contacts in Hydrabad:");
+const contactsInNY = addressBook.findContactsByCity('Hydrabad');
+contactsInNY.forEach(contact => {
+    console.log(`${contact.firstName} ${contact.lastName}`);
+});
+
+console.log("Contacts in Pune:");
+const contactsInCA = addressBook.findContactsByState('Pune');
+contactsInCA.forEach(contact => {
+    console.log(`${contact.firstName} ${contact.lastName}`);
+});
+    
+console.log("Final display");
+console.log("Persons in Hydrabad:");
+const personsInNY = addressBook.viewPersonsByCity('Hydrabad');
+personsInNY.forEach(contact => {
+    console.log(`${contact.firstName} ${contact.lastName}`);
+});
+
+console.log("Persons in Pune:");
+const personsInCA = addressBook.viewPersonsByState('Pune');
+personsInCA.forEach(contact => {
+    console.log(`${contact.firstName} ${contact.lastName}`);
+});
