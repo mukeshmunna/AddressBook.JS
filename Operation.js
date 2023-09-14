@@ -40,3 +40,6 @@ addressBook.displayContacts();
 addressBook.deleteContactByName("steve", "Smith");
 console.log("Final display");
 addressBook.displayContacts();
+
+const contactCount = addressBook.getContactCount();
+console.log(`Number of Contacts: ${contactCount}`);

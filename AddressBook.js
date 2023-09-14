@@ -60,6 +60,9 @@ class AddressBook {
             return false;
         }
     }
+    getContactCount() {
+        return this.contacts.reduce((count, contact) => count + 1, 0);
+    }
 }
 
 module.exports = AddressBook;
