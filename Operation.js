@@ -11,4 +11,29 @@ addressBook.addContact(contact1);
 addressBook.addContact(contact2);
 addressBook.addContact(contact3);
 
+
+addressBook.displayContacts();
+
+const foundContact = addressBook.findContactByName("Shrey", "Vermas");
+
+if (foundContact) {
+   
+    const updatedInfo = {
+        address: "789 Elm St",
+        city: "Chicago",
+        state: "ILqwerty",
+        zip: "600601",
+        phoneNumber: "1234567890",
+        email: "updated.email@example.com",
+    };
+    const success = addressBook.editContact("Shrey", "Vermas", updatedInfo);
+    if (success) {
+        console.log("Contact updated successfully!");
+    } else {
+        console.log("Contact not found.");
+    }
+}
+else {
+    console.log("Contact not found.");
+}
 addressBook.displayContacts();
