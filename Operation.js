@@ -48,3 +48,5 @@ console.log(`Number of Contacts: ${contactCount}`);
 
 addressBook.addContact(contact4);
 
+addressBook.findAndDisplayContactsByCity('Hydrabad');
+addressBook.findAndDisplayContactsByState('dyduf');
