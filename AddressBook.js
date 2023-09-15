@@ -5,7 +5,7 @@ class AddressBook {
     }
   
     addContact(contact) {
-    
+      // Check for duplicates based on first and last name
       const isDuplicate = this.contacts.some((existingContact) => {
         return (
           existingContact.firstName === contact.firstName &&
@@ -31,7 +31,7 @@ class AddressBook {
         console.log(`Zip Code: ${contact.zip}`);
         console.log(`Phone Number: ${contact.phoneNumber}`);
         console.log(`Email: ${contact.email}`);
-        console.log("-------------");
+        console.log("-------------"); // Separator between contacts
       });
     }
     findContactByName(firstName, lastName) {
@@ -67,6 +67,7 @@ class AddressBook {
       });
   
       if (foundContactIndex !== -1) {
+        // Use splice to remove the contact from the array
         this.contacts.splice(foundContactIndex, 1);
         console.log("Contact Deleted");
         return true;
@@ -76,10 +77,10 @@ class AddressBook {
       }
     }
     getContactCount() {
-      
+      // Use the reduce function to count the contacts in the array
       return this.contacts.reduce((count, contact) => count + 1, 0);
     }
-    
+    // Method to search for contacts by city and display them
     findAndDisplayContactsByCity(city) {
       const filteredContacts = this.contacts.filter(
         (contact) => contact.city === city
@@ -94,7 +95,8 @@ class AddressBook {
         });
       }
     }
-
+  
+    // Method to search for contacts by state and display them
     findAndDisplayContactsByState(state) {
       const filteredContacts = this.contacts.filter(
         (contact) => contact.state === state
@@ -109,7 +111,7 @@ class AddressBook {
         });
       }
     }
-    
+    // Helper method to display contact information
     displayContact(contact) {
       console.log(`First Name: ${contact.firstName}`);
       console.log(`Last Name: ${contact.lastName}`);
@@ -121,7 +123,7 @@ class AddressBook {
       console.log(`Email: ${contact.email}`);
       console.log("-------------"); 
     }
-   
+    
     findContactsByCity(city) {
       return this.contacts.filter((contact) => contact.city === city);
     }
@@ -139,6 +141,28 @@ class AddressBook {
     
     viewPersonsByState(state) {
       return this.contacts.filter((contact) => contact.state === state);
+    }
+    getCountByCity(city) {
+      const count = this.contacts.reduce((total, contact) => {
+        if (contact.city === city) {
+          return total + 1;
+        }
+        return total;
+      }, 0);
+  
+      return count;
+    }
+  
+    
+    getCountByState(state) {
+      const count = this.contacts.reduce((total, contact) => {
+        if (contact.state === state) {
+          return total + 1;
+        }
+        return total;
+      }, 0);
+  
+      return count;
     }
   }
   module.exports = AddressBook;
