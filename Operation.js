@@ -9,14 +9,14 @@ const contact3 = new Contact("John", "Son", "xcdsvdsvsd", "ndsddvssjdjk", "hdhui
 const contact4 = new Contact("Prasad", "Kumar", "98-s njjv", "hiiheloo", "rtyhgfdrtg", "7565778", "9098789879", "prasad@example.com");
 const contact5 = new Contact("Pavan", "Kalyan", "65h-hhdh colony", "pomnukihj", "ghfdhfyh", "887887", "8987673658", "pavan@example.com");
 const contact6 = new Contact("Kalyan", "Pavan", "ygdsdfghj", "gygfdyuytd", "ftyfdtytg", "567876", "9988776655", "fhgfd@example.com");
+const contact7 = new Contact("Harish", "Kumar", "fdffghc", "jhgfvbhfh", "fygfdtgf", "569870", "9090878765", "harish@example.com");
 
 
 addressBook.addContact(contact1);
 addressBook.addContact(contact2);
 addressBook.addContact(contact3);
-addressBook.addContact(contact4);
-addressBook.addContact(contact5);
 addressBook.addContact(contact6);
+addressBook.addContact(contact5);
 
 
 addressBook.displayContacts();
@@ -85,3 +85,6 @@ console.log("Count in Hydrabad:", countInNewYork);
 
 const countInNY = addressBook.getCountByState('hiiheloo');
 console.log("Count in hiiheloo:", countInNY);
+console.log("Final display");
+addressBook.addContact(contact7);
+addressBook.displayContacts();
